@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Make A Meeting</title>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui/jquery-ui.js"></script>
+<script src="js/datetimepicker.js"></script>
+
+<link rel="stylesheet" type="text/css" href="CSS/main.css">
+<link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.theme.min.css"> 
+<link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.structure.min.css">
+<link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.min.css">  
+<link rel="stylesheet" type="text/css" href="css/datetimepicker.css">  
+</head>
+ <body>
+	<div class="wrap">
+            <div id="logo"><img alt="Logo" src="Images/meeting.Gif"></div>
+            <div id="Nav">
+
+                <a href="home.php">Meeting</a>
+                <a href="Calander.php" id="currentpage">Create Agenda</a>
+                <a href="Users.php" >Users</a>
+                <a href="index.php">Log in</a>
+   
+    </div>
+    <div id="MainCont">
+<form action="php/meetingMake.php" method="post">
+	<h1>Create Meeting</h1>
+	<br /><input type="text" name="meetingRef" placeholder="Meeting Reference" required/><br />
+	<br /><input type="password" name="pass" autocomplete="off" placeholder="Meeting Password" required /><br />
+<p>
+	<input type="text" name="start" class="time" placeholder="Enter start" required /> to 
+	<input type="text" name="end"   class="time" placeholder="Enter end"   required />
+</p>
+	<p><input type="submit" name="meetingSubmit" value="Make Meeting"></p>
+	
+</form>
+
+
+<script>
+$('.time').datetimepicker({
+	timeFormat: "HH:mm",	
+	dateFormat: 'yy-mm-dd'
+});
+</script>	
+    </div>
+ </body>
+ </html>

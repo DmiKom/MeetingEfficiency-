@@ -1,0 +1,94 @@
+            body{
+                background: linear-gradient(#ffffff, #273c61); /* Standard syntax */
+                opacity: 0.8;
+            }
+            .wrap{
+                margin-left: 23%;
+
+                height: 100%;
+                width: 700px;
+                
+            }
+            #nav a{
+                text-decoration: none;
+                color: black;
+                margin-right: 20px;
+                font-size: larger;
+            }
+            #nav{
+                margin-left: 35%;
+            }
+            #currentpage{
+                
+                background: #ffffff;
+                color: #000000;
+            }
+            #logo{
+                margin-left: 15%;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+            }
+            ul #list{
+                text-decoration: none;
+                list-style: none;
+            }
+            #MainCont {
+                margin-top: 10%;
+                margin-left: 25%;
+                border-color: #000000;
+                border: solid white 25px;
+                padding: 20px;
+                
+            }
+            #setAgenda #MainCont{
+                margin-left: 20%;
+            }
+            @media screen and (max-width: 200px) {
+                
+                body{
+                    background: linear-gradient(#ffffff, #273c61); 
+                    
+                }
+                .wrap{
+                    margin: 20%;
+                    height: 100%;
+                    width: 100%;
+                    
+                }
+                #nav a{
+                    text-decoration: none;
+                    color: black;
+                    margin-right: 20px;
+                    font-size: larger;
+                    float: left;
+                }
+                #nav{
+                    margin-left: 0%;
+                }
+                #currentpage{
+                    opacity: .4;
+                    background: #fff;
+                        color: #333;
+                }
+                #logo{
+                    margin-left: 0%;
+                }
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+                ul #list{
+                    text-decoration: none;
+                    list-style: none;
+                }
+                #MainCont {
+                    margin-top: 0%;
+                    margin-left: 0%;
+                
+                }
+                
+            }
+            
+            

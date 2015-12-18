@@ -1,0 +1,64 @@
+
+<html>
+<head>
+<title>Make A Meeting</title>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+
+<body> 
+
+<h2>Register</h2>
+<form  id="registerForm" method="post">
+
+<label for="userName">User Name</label><br />
+<input name="userName" type="text" id="userName" required /><br />
+
+
+<label for="email">Email</label> <br />
+<input name="email" type="email" id="email" required /><br />
+
+<label for="password">Password, must be at least 5 characters</label> <br />
+<input name="password" type="password" id="password" required /><br />
+
+<label for="confirm_password">Confirm password</label><br />
+<input id="confirm_password" name="confirmPassword" type="password" required /><br />
+
+<input type="submit" name="submit" value="Sign Up"  />
+</form>
+
+<!--<span class="error" style="display:none"> Please Enter Valid Data</span>
+<span class="success" style="display:none"> Form Submitted Success</span>-->
+
+<script>
+/* $(function() {
+  $("#registerForm").submit(function() {  
+if(email=='' || userName=='')
+{
+ alert("enter in fields");
+ return false;
+}
+else
+{
+  $.ajax({
+    type: "POST",
+    url: "php/register.php",
+	data: 	;
+    success: function(response){
+     alert(response);
+    }
+	error: function(response){
+		alert(response);
+	}
+  });
+}
+});
+}); */
+
+$("#registerForm").submit(function () {
+   $.post('php/register.php', $('#registerForm').serialize(), function (response) {
+      alert(response);
+   });
+});
+</script>
+</body>
+</html>
